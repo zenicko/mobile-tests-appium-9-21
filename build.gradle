@@ -1,3 +1,29 @@
 plugins {
     id "java-library"
 }
+def junitVersion = "5.8.2",
+    appiumVersion = "7.6.0",
+    selenideVersion = "5.25.1"
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "io.appium:java-client:$appiumVersion",
+            "com.codeborne:selenide:$selenideVersion"
+
+
+    )
+    testRuntimeOnly(
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
+
+    )
+}
+
+test {
+    useJUnitPlatform()
+}

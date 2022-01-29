@@ -9,15 +9,17 @@ The project shows how use an emulator of a mobile device or a real device for th
 ___
 [Vasenkov Stanislav](https://github.com/svasenkov)
 
-[Eugen Paraschiv(Baeldung)](https://twitter.com/baeldung)
+[Eugen Paraschiv (Baeldung)](https://twitter.com/baeldung)
 
 [Maintenance and technical support website https://browserstack.com](https://browserstack.com)
+
+[Wikipedia Android app contributors](https://github.com/wikimedia/apps-android-wikipedia/graphs/contributors)
 
 ## About homework
 ___
 1. Установить android studio https://developer.android.com/studio
 
-2. Прописать path. [See here](#About paths):
+2. Прописать path. See here Miscellaneous/1. About paths:
 
 3. Установить appium desktop https://github.com/appium/appium-desktop
 
@@ -39,15 +41,18 @@ ___
 ## What's new?
 ___
 
-1. How creates a table by MD?
+1. How creates a table by MD.
 ```
 | A | B | C |
 |---|---|---|
 |   |   |   |
 |   |   |   |
 ```
-2. How creates a link in tag `img`?
+2. How creates a link in tag `img`.
 `<a href=""> <img src="" width="XX" height="YY"> </a>`
+
+3. Appium
+   1. [Appium Desired Capabilities](https://appium.io/docs/en/writing-running-appium/caps/)
 
 ## Resources
 ___
@@ -56,7 +61,7 @@ ___
 
 ## Miscellaneous
 ___
-#### About paths
+1. About paths
 Параметры Path:
 
 Windows:
@@ -80,3 +85,12 @@ $ANDROID_HOME/platform-tools
 Одной строкой, можно скопировать и добавить в .bash_profile:
 
 export PATH=”${PATH}:/$ANDROID_HOME/tools:/$ANDROID_HOME/tools/bin:/$ANDROID_HOME/platform-tools”
+
+
+2. Appium tutorial: Get appPackage и appActivity
+
+[2 Ways to find appPackage and appActivity name of your App](https://www.automationtestinghub.com/apppackage-and-appactivity-name/)
+
+[Appium tutorial (7) - получить appPackage и appActivity](https://russianblogs.com/article/5702202808/)
+
+
