@@ -40,6 +40,7 @@ ___
 
 ## Using
 General properties for a real or emulated device is in the file `resources/config/local/local.properties`.
+
 Example:
 ```
 local.appPackage=org.wikipedia.alpha
@@ -78,6 +79,7 @@ emulator-5554   device
 ```
 
 * start on an emulated device:
+
   `./gradlew test -DtypeDevice=emulate`
 
 **Note**: Set properties in the file `resources/config/local/emulate/mobiledevice.properties`:
@@ -139,11 +141,10 @@ ___
 3. Appium
    1. [Appium Desired Capabilities](https://appium.io/docs/en/writing-running-appium/caps/)
    2. [Appium как подключить девайс?](https://software-testing.ru/forum/index.php?/topic/34805-appium-kak-podkliuchit-devajs/)
-   3.Appium tutorial: Get appPackage и appActivity
+   3. Appium tutorial. Get appPackage и appActivity:
+      1. [2 Ways to find appPackage and appActivity name of your App](https://www.automationtestinghub.com/apppackage-and-appactivity-name/)
+      2. [Appium tutorial (7) - получить appPackage и appActivity](https://russianblogs.com/article/5702202808/)
 
-   [2 Ways to find appPackage and appActivity name of your App](https://www.automationtestinghub.com/apppackage-and-appactivity-name/)
-
-   [Appium tutorial (7) - получить appPackage и appActivity](https://russianblogs.com/article/5702202808/)
 4. BrowserStack
    1. upload wiki app in site BrowserStack:
 ```
