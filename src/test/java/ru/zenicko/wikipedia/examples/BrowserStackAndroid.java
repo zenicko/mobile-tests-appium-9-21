@@ -1,4 +1,4 @@
-package ru.zenicko.examples;
+package ru.zenicko.wikipedia.examples;
 
 import java.net.URL;
 import java.util.List;
@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.zenicko.wikipedia.config.browserstack.BrowserStack;
 
 public class BrowserStackAndroid {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
@@ -18,20 +19,20 @@ public class BrowserStackAndroid {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         // Set your access credentials
-        capabilities.setCapability("browserstack.user", "bot_l05D9g");
-        capabilities.setCapability("browserstack.key", "jy2xzhDKAtFVyrp8Lc7x");
+        capabilities.setCapability("browserstack.user", BrowserStack.browserStackConfig.user());
+        capabilities.setCapability("browserstack.key", BrowserStack.browserStackConfig.key());
 
         // Set URL of the application under test
-        capabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        capabilities.setCapability("app", BrowserStack.browserStackConfig.app());
 
         // Specify device and os_version for testing
         capabilities.setCapability("device", "Google Pixel 3");
         capabilities.setCapability("os_version", "9.0");
 
         // Set other BrowserStack capabilities
-        capabilities.setCapability("project", "First Java Project");
-        capabilities.setCapability("build", "browserstack-build-1");
-        capabilities.setCapability("name", "first_test");
+        capabilities.setCapability("project", BrowserStack.browserStackConfig.nameProject());
+        capabilities.setCapability("build", BrowserStack.browserStackConfig.nameBuild());
+        capabilities.setCapability("name", BrowserStack.browserStackConfig.name());
 
 
         // Initialise the remote Webdriver using BrowserStack remote URL
