@@ -21,9 +21,16 @@ public class LanguagePanelTests extends TestBase {
     @Story("Story: what a default language is set")
     @DisplayName("Check default language (EN)")
     void defaultLanguageIsEn() {
-        back();
-        $(MobileBy.AccessibilityId("Search Wikipedia")).click();
-        $(MobileBy.id("org.wikipedia.alpha:id/search_lang_button")).shouldHave(Condition.text("EN"));
+        step("Close the start page", () -> {
+            back();
+        });
+        step("Activate the the search field", () -> {
+            $(MobileBy.AccessibilityId("Search Wikipedia")).click();
+        });
+
+        step("Check default language, it should be \"EN\"", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/search_lang_button")).shouldHave(Condition.text("EN"));
+        });
     }
 
     @ParameterizedTest(name = "ParameterizedTest: Change a default language on {1} and check the code language {0}")

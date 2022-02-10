@@ -40,7 +40,7 @@ dependencies {
             "org.slf4j:slf4j-simple:1.7.32"
     )
 }
-// Choose ones of [emulate, real, browserstack], selenoid is in progressing]
+// Choose ones of [emulate, real, browserstack, selenoid]
 def typeStartingByDefault = "emulate"
 
 test {
@@ -64,9 +64,8 @@ test {
 
     }
     if (System.getProperty("typeDevice") == "selenoid") {
-        systemProperties["locationDevice"] = null
+        systemProperties["locationDevice"] = "remote"
     }
-
 
     useJUnitPlatform()
 }

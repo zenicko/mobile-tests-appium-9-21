@@ -7,19 +7,17 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import ru.zenicko.wikipedia.drivers.DriverProvider;
-import ru.zenicko.wikipedia.helpers.AllureAttachments;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import ru.zenicko.wikipedia.helpers.attachments.Attachment;
+import ru.zenicko.wikipedia.providers.TestProvider;
 
 public class TestBase {
+    Attachment addAttachments = TestProvider.getAttachment();
 
     @BeforeAll
     public static void SetUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = DriverProvider.getNameClassOfDriver();
+        Configuration.browser = TestProvider.getNameClassOfDriver();
         Configuration.startMaximized = false;
         Configuration.browserSize = null;
         Configuration.timeout = 10000;
@@ -32,14 +30,6 @@ public class TestBase {
 
     @AfterEach
     public void setDown() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss.SSS");
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(dtf.format(now));
-
-        AllureAttachments.addScreenshotAs("Last screenshot " + dtf.format(now));
-        AllureAttachments.addPageSource();
-
-        Selenide.closeWebDriver();
-
+        addAttachments.addAttachmets();
     }
 }
