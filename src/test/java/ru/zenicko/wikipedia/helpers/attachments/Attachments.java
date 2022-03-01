@@ -1,6 +1,9 @@
 package ru.zenicko.wikipedia.helpers.attachments;
 
 import com.codeborne.selenide.Selenide;
+import ru.zenicko.wikipedia.helpers.videourl.BrowserStack;
+import ru.zenicko.wikipedia.helpers.videourl.SelenoidQaGuru;
+import ru.zenicko.wikipedia.helpers.videourl.VideoUrl;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -17,9 +20,14 @@ public class Attachments {
         Selenide.closeWebDriver();
     }
 
-    public static void addAllAttachments() {
+    public static void addAllAttachmentsWithBrowserStack() {
         String sessionId = AllureAttachments.getSessionId();
         addAttachmentsWithoutVideo();
-        AllureAttachments.attachVideo(sessionId);
+        AllureAttachments.attachVideo(sessionId, new BrowserStack());
+    }
+    public static void addAllAttachmentsWithSelenoidQaGuru() {
+        String sessionId = AllureAttachments.getSessionId();
+        addAttachmentsWithoutVideo();
+        AllureAttachments.attachVideo(sessionId, new SelenoidQaGuru());
     }
 }

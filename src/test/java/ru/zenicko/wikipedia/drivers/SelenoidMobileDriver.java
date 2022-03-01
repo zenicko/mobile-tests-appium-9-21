@@ -16,7 +16,7 @@ public class SelenoidMobileDriver extends BaseMobileDriver implements WebDriverP
     @Override
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
         desiredCapabilities.setCapability("deviceName", mobileDeviceConfig.device());
-        desiredCapabilities.setCapability("platformName", "android");
+        desiredCapabilities.setCapability("platformName", "Android");
         desiredCapabilities.setCapability("version", mobileDeviceConfig.osVersion());
 
         desiredCapabilities.setCapability("locale", mobileDeviceConfig.locale());
@@ -28,7 +28,7 @@ public class SelenoidMobileDriver extends BaseMobileDriver implements WebDriverP
         desiredCapabilities.setCapability("enableVNC", true);
         desiredCapabilities.setCapability("enableVideo", true);
 
-        desiredCapabilities.setCapability("app", FileUtils.getAbsolutePath(localConfig.pathApp()));
+        desiredCapabilities.setCapability("app", getBrowserUrl(localConfig.pathApp()));
 
         return new AndroidDriver(getBrowserUrl(localConfig.url()), desiredCapabilities);
     }

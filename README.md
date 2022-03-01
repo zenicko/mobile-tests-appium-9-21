@@ -3,7 +3,7 @@
 
 # I'm readme file and will tell about the project
 ___
-The project shows how use an emulator of a mobile device or a real device for the test of a mobile app.
+The project shows how to use an emulator of a mobile device or a real device for testing of a mobile app.
 
 ## Acknowledgements
 ___
@@ -51,7 +51,7 @@ local.url=http://127.0.0.1:4723/wd/hub
 ```
 The apk file is in `resources/apk/app-alpha-universal-release.apk`.
 
-The paths of local starting tests by command line or IDE:
+### The paths of local starting tests by command line or IDE:
 * start on default `emulate`: 
 
    `./gradlew test`
@@ -119,6 +119,31 @@ browserstack.project=First Java Project
 browserstack.build=browserstack-build-1
 browserstack.name=first_test
 ```
+
+* start on the site [Selenoid QA GURU](https://selenoid.autotests.cloud):
+  `./gradlew test -DtypeDevice=selenoid`
+
+**Note**:
+1. Set properties in the file `resources/config/remote/selenoid/mobiledevice.properties`:
+```
+device=android
+os_version=8.1
+locale=en
+language=en
+```
+
+2. Set properties in the file `resources/config/remote/local.properties`:
+
+```
+local.appPackage=org.wikipedia.alpha
+local.appActivity=org.wikipedia.main.MainActivity
+local.path.app=https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk
+local.url=https://[USER_NAME]:[PASSWORD]@selenoid.autotests.cloud/wd/hub
+```
+
+### How to start by Jenkins?
+
+
 
 ## What's new?
 ___

@@ -42,10 +42,10 @@ public class TestProvider {
                 return Attachments::addAttachmentsWithoutVideo;
             case "browserstack":
                 System.out.println("browserstack");
-                return Attachments::addAllAttachments;
+                return Attachments::addAllAttachmentsWithBrowserStack;
             case "selenoid":
                 System.out.println("selenoid");
-                return Attachments::addAllAttachments;
+                return Attachments::addAllAttachmentsWithSelenoidQaGuru;
             default:
                 throw new RuntimeException(String.format("The type of staring %s is unknown" +
                         "Choose ones of [emulate, real, browserstack], selenoid is in progressing].", typeDevice));

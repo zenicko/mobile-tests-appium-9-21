@@ -41,14 +41,14 @@ dependencies {
     )
 }
 // Choose ones of [emulate, real, browserstack, selenoid]
-def typeStartingByDefault = "emulate"
+def typeStartingByDefault = "selenoid"
 
 test {
     systemProperties(System.getProperties())
 
     if (System.getProperty("typeDevice") == null) {
-        systemProperties["locationDevice"] = "local"
         systemProperties["typeDevice"] = typeStartingByDefault
+        systemProperties["locationDevice"] = "local"
 
     }
     if (System.getProperty("typeDevice") == "emulate") {
@@ -66,6 +66,9 @@ test {
     if (System.getProperty("typeDevice") == "selenoid") {
         systemProperties["locationDevice"] = "remote"
     }
+
+    systemProperties["typeDevice"] = "selenoid"
+    systemProperties["locationDevice"] = "remote"
 
     useJUnitPlatform()
 }

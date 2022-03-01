@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class SearchTests extends TestBase {
+
     @Test
     @Feature("Feature: search")
     @Story("Story: give a list of searching results")

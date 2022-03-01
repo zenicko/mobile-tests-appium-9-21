@@ -1,10 +1,10 @@
-package ru.zenicko.wikipedia.helpers;
+package ru.zenicko.wikipedia.helpers.videourl;
 
 import static io.restassured.RestAssured.given;
 import static ru.zenicko.wikipedia.config.browserstack.BrowserStack.browserStackConfig;
 
-public class BrowserStack {
-    public static String videoUrl(String sessionId) {
+public class BrowserStack implements VideoUrl {
+    public String getVideoUrl(String sessionId) {
         return given()
                 .auth().basic(browserStackConfig.user(), browserStackConfig.key())
                 .when()

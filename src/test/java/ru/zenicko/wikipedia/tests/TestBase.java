@@ -26,6 +26,7 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         Selenide.open();
+
     }
 
     @AfterEach

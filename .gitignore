@@ -9,3 +9,4 @@ gradlew
 gradlew.bat
 src/test/resources/apk/app-alpha-universal-release.apk
 src/test/resources/config/remote/browserstack/browserstack.properties
+src/test/resources/config/remote/local.properties
