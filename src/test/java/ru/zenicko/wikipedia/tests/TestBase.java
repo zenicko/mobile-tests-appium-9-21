@@ -32,5 +32,6 @@ public class TestBase {
     @AfterEach
     public void setDown() {
         addAttachments.addAttachmets();
+        Selenide.closeWebDriver();
     }
 }

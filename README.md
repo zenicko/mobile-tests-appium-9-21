@@ -3,7 +3,8 @@
 
 # I'm readme file and will tell about the project
 ___
-The project shows how to use an emulator of a mobile device or a real device for testing of a mobile app.
+The project shows how to use an emulator of a mobile device, 
+a real device  or a remote browser for testing of a mobile app.
 
 ## Acknowledgements
 ___
@@ -92,6 +93,7 @@ language=en
 ```
 
 * start on the site [BrowserStack](https://www.browserstack.com/):
+
   `./gradlew test -DtypeDevice=browserstack`
 
 **Note**: 
@@ -121,6 +123,7 @@ browserstack.name=first_test
 ```
 
 * start on the site [Selenoid QA GURU](https://selenoid.autotests.cloud):
+
   `./gradlew test -DtypeDevice=selenoid`
 
 **Note**:
@@ -142,6 +145,9 @@ local.url=https://[USER_NAME]:[PASSWORD]@selenoid.autotests.cloud/wd/hub
 ```
 
 ### How to start by Jenkins?
+
+
+
 
 
 
