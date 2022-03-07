@@ -67,8 +67,5 @@ test {
         systemProperties["locationDevice"] = "remote"
     }
 
-    systemProperties["typeDevice"] = "selenoid"
-    systemProperties["locationDevice"] = "remote"
-
     useJUnitPlatform()
 }
