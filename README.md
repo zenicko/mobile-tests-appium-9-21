@@ -169,13 +169,13 @@ browserstack.name=first_test
 The link of the allure report [QA GURU selenoid](https://selenoid.autotests.cloud) is [here](https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/15/allure/)
 
 <a href="https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/15/allure/"> 
-    <img src="readme-images/Allure report for the remote selenoid.jpg" width="500" height="300"> 
+    <img src="readme-images/Allure report for the remote selenoid.jpg" width="550" height="300"> 
 </a>
 
 The link of the allure report [The site BrowserStack](https://browserstack.com) is [here](https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/14/allure/)
 
 <a href="https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/14/allure/">
-    <img src="readme-images/Allure report for the BrowserStack.jpg" width="500" height="300">
+    <img src="readme-images/Allure report for the BrowserStack.jpg" width="550" height="300">
 </a>
 
 * start on the site by [selenoid QA GURU](https://selenoid.autotests.cloud):
