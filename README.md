@@ -122,12 +122,62 @@ browserstack.build=browserstack-build-1
 browserstack.name=first_test
 ```
 
-
-
 ## How to start by Jenkins?
+### Here are some ideas how to set Jenkins
+1. Set parameters of a job 
+   1. Enviroments:
+   
+      <img src="readme-images/Set parameters of a job-enviroments.jpg" width="200" height="200">
+      
+   2. The Browserstack key (credentials):
+   
+      <img src="readme-images/Set parameters of a job-browserstack_key.jpg" width="200" height="200">
+    
+2. Set the repository URL and the branch:
 
+   <img src="readme-images/Github repo.jpg" width="200" height="200">
+   
+3. Recommended parameters of a job:
+
+    <img src="readme-images/Recommended parameters of a job.jpg" width="200" height="200">
+4. The steps before start a job:
+   1. Create the file src/test/resources/config/remote/selenoid/mobiledevice.properties
+   
+    <img src="readme-images/Step 1 create file mobiledevice.properties.jpg" width="200" height="200">
+   
+   2. Create the file src/test/resources/config/remote/local.properties
+   
+    <img src="readme-images/Step 2 create the file local.properties.jpg" width="200" height="200">
+   
+   3. Create the file src/test/resources/config/remote/browserstack/browserstack.properties
+   
+    <img src="readme-images/Step 3 create the file browserstack.properties.jpg" width="200" height="200">
+   
+   4. Create the file src/test/resources/config/remote/browserstack/mobiledevice.properties
+   
+    <img src="readme-images/Step 4 create the file mobiledevice.properties.jpg" width="200" height="200">
+   
+5. Invoke Gradle script:
+
+    <img src="readme-images/start script.jpg" width="200" height="200">
+   
+6. There are steps after:
+
+    <img src="readme-images/the steps after.jpg" width="200" height="200">
 
 ### The Remoted starting by https://jenkins.autotests.cloud
+The link of the allure report [QA GURU selenoid](https://selenoid.autotests.cloud) is [here](https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/15/allure/)
+
+<a href="https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/15/allure/"> 
+    <img src="readme-images/Allure report for the remote selenoid.jpg" width="300" height="300"> 
+</a>
+
+The link of the allure report [The site BrowserStack](https://browserstack.com) is [here](https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/14/allure/)
+
+<a href="https://jenkins.autotests.cloud/job/C09-nz256-lesson21-mobile-tests/14/allure/">
+    <img src="readme-images/Allure report for the BrowserStack.jpg" width="300" height="300">
+</a>
+
 * start on the site by [selenoid QA GURU](https://selenoid.autotests.cloud):
 
   `./gradlew test -DtypeDevice=selenoid`
